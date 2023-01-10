@@ -30,5 +30,11 @@ namespace RazorPagesPizza.Pages
         }
 
         [BindProperty] public Pizza NewPizza { get; set; } = new();
+
+        public IActionResult OnPostDelete(int id)
+        {
+            PizzaService.Delete(id);
+            return RedirectToAction("Get");
+        }
     }
 }

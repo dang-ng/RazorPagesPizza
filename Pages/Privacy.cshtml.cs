@@ -14,7 +14,6 @@ public class PrivacyModel : PageModel
 
     public void OnGet()
     {
-        Pizzas = PizzaService.GetAll();
     }
 }
 
